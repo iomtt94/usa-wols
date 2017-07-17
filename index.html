@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wolsen real estate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="http://eb5.wolsenrealestate.com/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/vendors/modernizr-2.8.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXJk_LTVFquxuN7JDggx0vuufRwWRdPp4&callback=initMap1" async defer></script>
+    <script>
+        var centerCoord;
+        if ($(window).width() < 768) {
+            centerCoord = {
+                lat: 25.782380,
+                lng: -80.192136
+            };
+        } else if ($(window).width() < 1024) {
+            centerCoord = {
+                lat: 25.782472,
+                lng: -80.194791
+            };
+        } else {
+            centerCoord = {
+                lat: 25.782003,
+                lng: -80.199572
+            };
+        }
+
+        function initMap1() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: centerCoord,
+                zoom: 16,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+                disableDefaultUI: true,
+                zoomControl: true
+            });
+            var triangleCoords = [{
+                lat: 25.782941,
+                lng: -80.192175
+            }, {
+                lat: 25.782905,
+                lng: -80.193846
+            }, {
+                lat: 25.783579,
+                lng: -80.193875
+            }, {
+                lat: 25.783582,
+                lng: -80.192203
+            }, {
+                lat: 25.783772,
+                lng: -80.192215
+            }, {
+                lat: 25.783808,
+                lng: -80.190745
+            }, {
+                lat: 25.780638,
+                lng: -80.190640
+            }, {
+                lat: 25.780580,
+                lng: -80.193763
+            }, {
+                lat: 25.781922,
+                lng: -80.193811
+            }, {
+                lat: 25.781953,
+                lng: -80.192141
+            }];
+            var objWallsen = new google.maps.Polygon({
+                paths: triangleCoords,
+                strokeColor: '#51bcd6',
+                strokeOpacity: 0.8,
+                strokeWeight: 0,
+                fillColor: '#51bcd6',
+                position: {
+                    lat: 25.783582,
+                    lng: -80.192136
+                },
+                fillOpacity: 0.7
+            });
+            objWallsen.setMap(map);
+
+            var contentString =
+                '<div class="obj-desc">Место строительства<br><span class="blue">комплекса <br>Paramount Miami Worldcenter</span></div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            objWallsen.addListener('click', function() {
+                infowindow.open(map, objWallsen);
+            });
+
+            var map2 = new google.maps.Map(document.getElementById('map-contacts'), {
+                center: {
+                    lat: 25.9300243,
+                    lng: -80.1280363
+                },
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                disableDefaultUI: true
+            });
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: 25.9300243,
+                    lng: -80.1280363
+                },
+                map: map2,
+                title: 'Wolsen Real Estate'
+            });
+        }
+    </script>
+</head>
+
+<body onload="initialize();">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="http://browsehappy.com/">обновите</a> Ваш браузер.</p>
+    <![endif]-->
+    <p class="no-js-message">
+        Для работы этого сайта необходимо включить JavaScript. <br> Пожалуйста, включите Javascript в Вашем браузере.
+    </p>
+    <div id="mine-menu-open" class="mine-menu-open mine-menu-toggle">
+        <span></span>
+        <nav class="mine-menu" id="mine-menu">
+            <ul class="mine-menu-list">
+                <li class="mine-menu-item"><a href="#home" class="mine-menu-link">В НАЧАЛО</a></li>
+                <li class="mine-menu-item"><a href="#about" class="mine-menu-link">О МАЙАМИ</a></li>
+                <li class="mine-menu-item"><a href="#future" class="mine-menu-link">Будущее Майами уже сейчас</a></li>
+                <li class="mine-menu-item"><a href="#visa" class="mine-menu-link">Виза EB5</a></li>
+                <li class="mine-menu-item"><a href="#follow" class="mine-menu-link">Юридическое сопровождение</a></li>
+                <li class="mine-menu-item"><a href="#lawyers" class="mine-menu-link">Адвокаты фирмы</a></li>
+                <li class="mine-menu-item"><a href="#order-docs" class="mine-menu-link">Порядок оформления документов EB-5</a></li>
+                <li class="mine-menu-item"><a href="#paramount" class="mine-menu-link">ИНВЕСТИЦИОННАЯ ПРОГРАММА EB5</a></li>
+                <li class="mine-menu-item"><a href="#object" class="mine-menu-link">ОБ ОБЪЕКТЕ ИНВЕСТИЦИИ</a></li>
+                <li class="mine-menu-item"><a href="#about-us" class="mine-menu-link">О НАС</a></li>
+                <li class="mine-menu-item"><a href="#team" class="mine-menu-link">НАША КОМАНДА</a></li>
+                <li class="mine-menu-item"><a href="#contacts" class="mine-menu-link">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="home" class="sec-1 clear">
+        <div class="sec-1-left"></div>
+        <div class="sec-1-right"><div class="shadow"></div></div>
+        <div class="sec-1-content cont cont-mob-cent">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Wolsen real estate" class="logo">
+            </div>
+            <div class="sec-1-headers-groupe">
+                <h1 class="main-header">
+                    ИНВЕСТИРУЙТЕ<br> В РАСТУЩИЙ РЫНОК<br> НЕДВИЖИМОСТИ МАЙАМИ
+                </h1>
+                <h2 class="sub-header">
+                    и получите Грин-карту<br> по программе <i>EB5</i>
+                </h2>
+            </div>
+        </div>
+        <a href="#about" class="sec-1-scroll-button" role="button" title="Используйте скролл мыши для просмотра сайта">
+            <span class="horn horn-1"></span>
+            <span class="horn horn-2"></span>
+        </a>
+    </section>
+    <section id="about" class="sec-2 clear cont">
+        <h2 class="sec-header">О МАЙАМИ</h2>
+        <p class="sec-text sec-2-text">
+            Майами входит в рейтинг ТОП 10 городов, составленый крупнейшей независимой международной консалтинговой компанией Knight Frank
+        </p>
+        <div class="sec-2-infoblock clear">
+            <div class="sec-2-listblock">
+                <div class="sec-2-top-half-list">
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">01</b> Лондон</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">02</b> Нью Йорк</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">03</b> Гонконг</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">04</b> Сингапур</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">05</b> Шанхай</div>
+                </div>
+                <div class="sec-2-six">
+                    <div class="sec-2-six-wrap paralax1">
+                        <div class="six-num">06</div>
+                        <div class="six-sity">МАЙАМИ</div>
+                        <div class="six-text">Опрос Knight Frank по глобальным городам</div>
+                    </div>
+                </div>
+                <div class="sec-2-bot-half-list">
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">07</b> Париж</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">08</b> Дубай</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">09</b> Пекин</div>
+                    <div class="sec-2-list-item"><b class="sec-2-list-num blue">10</b> Цюрих</div>
+                </div>
+            </div>
+            <figure class="sec-2-imgblock imgblock">
+                <img src="images/sec-2-img.jpg" alt="Майами" class="sec-2-img">
+                <figcaption class="sec-2-imgdesc">
+                    Опрос Knight Frank по глобальным городам отслеживает, какие города являются наиболее важными на сегодня для богатых людей в мире. Он ранжирует города на основе 4 факторов: экономическая активность, качество жизни, знания и влияние, политическая власть.
+                    А также принимает во внимание количество этих состоятельных лиц и каждий дом в городе.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <div class="sec-3" id="counts">
+        <div class="sec-3-cont cont clear">
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap">
+                        <img src="images/icon-visitor.svg" alt="visitor" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement1">0</div>
+                        <div class="igraph-text">МИЛЛИОНОВ ВИЗИТОВ <br>В ГОД</div>
+                    </div>
+                </div>
+            </div>
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap">
+                        <img src="images/icon-airplane.svg" alt="airplane" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement2">0</div>
+                        <div class="igraph-text">МИЛЛИОН ПЕРЕЛЕТОВ <br>ЧЕРЕЗ МАЙАМИ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap">
+                        <img src="images/icon-anchor.svg" alt="anchor" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement3">0</div>
+                        <div class="igraph-text">МИЛЛИОНОВ <br>КРУИЗОВ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap spincrement">
+                        <img src="images/icon-corporate.svg" alt="corporate" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement4">0</div>
+                        <div class="igraph-text">КОРПОРАТИВНЫХ <br>ШТАБ-КВАРТИР</div>
+                    </div>
+                </div>
+            </div>
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap">
+                        <img src="images/icon-consulates.svg" alt="consulates" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement5">0</div>
+                        <div class="igraph-text">ИНОСТРАННЫХ <br>КОНСУЛЬСТВ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="igraph-item">
+                <div class="igraph-item-wrap">
+                    <div class="igraph-icon-wrap">
+                        <img src="images/icon-trade.svg" alt="trade" class="igraph-icon">
+                    </div>
+                    <div class="igraph-desc">
+                        <div class="igraph-count spincrement6">0</div>
+                        <div class="igraph-text">ИНОСТРАННЫХ <br>ТОРГОВЫХ ПРЕДСТАВИТЕЛЬСТВ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="future" class="sec-4 clear cont">
+        <div class="sec-4-imgblock imgblock line2">
+            <h2 class="gradient-block sec-4-gradient-block paralax2">Будущее Майами уже сейчас</h2>
+            <img src="images/sec-4-img.jpg" alt="Майами Даунтаун">
+        </div>
+        <div class="sec-4-textblock namelist">
+            <p><b>Майами уже чуть более 100 лет</b> и он признан одним из самых быстрорастущих городов для *капитала* в Латинской Америке. Уникальные практически во всех отношениях сюрпризы Майами для случайного посетителя и завораживает тех кому посчастливилось
+                назвать его домом.</p>
+            <p><b>Уникальные </b>практически во всех отношениях сюрпризы Майами для случайного посетителя и завораживает тех кому посчастливилось назвать его домом.</p>
+            <p><b>С умеренным климатом,</b> белыми песчаными пляжами, видом на воду и мощной экономикой Майами продолжает привлекать путешественников.
+            </p>
+            <p><b>Из всех мест</b> в этом большом городе в центре кишит культура - музеи Мекки, научные музеи,центр исполнительных искусств и спортивная арена. Будущее Майами начинается сейчас. И ваш будущий дом здесь.</p>
+            <p><b>И ваш будущий дом здесь.</b></p>
+        </div>
+    </section>
+    <!--new sect-->
+    <div class="program-details" id="visa">
+        <div class="container">
+            <div class="container-outer">
+                <div class="inline-wrap">
+                    <div class="col-50 col-sm-100">
+                        <div class="program-inside left-side">
+                            <h2 class="lined-title blue blue-section-title program-title">Получите вид на жительство США для себя и родных через инвестиции в экономику страны по программе EB-5
+                            </h2>
+                            <article class="program-article">
+                                <h3 class="article-golden-title">Что такое виза инвестора EB5</h3>
+                                <p class="new-paragraph">
+                                    Американская инвестиционная программа получения грин карты EB5 — один из самых быстрых и эффективных способов переезда в США и получения гражданства.
+                                </p>
+                                <p class="new-paragraph bordered-block full-border">
+                                    <span class="golden-text">Цель программы EB-5 — </span>получение вида на жительство для себя и членов семьи через инвестции в экономику США. Вложенные средства возвращаются инвестору после завершения проекта с процентами,
+                                    а его семья получает постоянный вид на жительство в Соединённых Штатах Америки.
+                                </p>
+                                <p class="new-paragraph">
+                                    <span class="golden-text">В программе EB-5</span> задействованы региональные центры — государственные или частные компании, аккредитованные иммиграционной службы США. Они создают и ведут инвестиционные проекты, помогают
+                                    инвесторам подготовить документы для иммиграционной службы, анализируют риски и оказывают информационную поддержку.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-50 col-sm-100">
+                        <div class="program-inside right-side">
+                            <figure class="program-figure">
+                                <img src="images/program1.jpg" alt="images" class="horizontal">
+                                <!-- class horizontal or vertical for a different images -->
+                            </figure>
+                            <div class="block-details">
+                                <ul class="star-list">
+                                    <li>Программа EB-5 — надежная схема для иммиграции в США</li>
+                                    <li>Программа работает с 1990 года</li>
+                                </ul>
+                                <div class="header-btn-holder">
+                                    <button class="empty-golden-btn message-modal-show2" type="button">Консультация эксперта</button>
+                                    <!-- consalt-modal-show call modal window -->
+                                </div>
+                            </div>
+                            <!-- dark block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="program-details last">
+        <div class="container">
+            <div class="container-outer">
+                <div class="inline-wrap">
+                    <div class="col-50 col-sm-100">
+                        <div class="program-inside left-side">
+                            <figure class="program-figure large">
+                                <img src="images/program2.jpg" alt="images" class="horizontal">
+                                <!-- class horizontal or vertical for a different images -->
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-50 col-sm-100">
+                        <div class="program-inside right-side">
+                            <article class="program-article">
+                                <h3 class="article-golden-title">Как это работает?</h3>
+                                <p class="new-paragraph">
+                                    Начиная с 1990 года, программа EB5 позволяет получить грин карты международным инвесторам. Для того, чтобы принять участие в программе, необходимо инвестировать $500,000 в бизнес, расположенный на территории Соединенных Штатов Америки с высоким уровнем
+                                    безработицы.
+                                </p>
+                                <p class="new-paragraph bordered-block">
+                                    <span class="golden-text">Инвестору необходимо</span> создать 10 полноценных рабочих мест в течение 2-х лет. Сразу после получения подтверждения заявки инвестора, которая по большей части сфокусирована на проверки легального
+                                    статуса инвестиции $500,000 (Petition i-526), он и все прямые члены его семьи (супруг/супруга и дети до 21 года) получают временный статус резидента.
+                                </p>
+                                <p class="new-paragraph">
+                                    <span class="golden-text">После того,</span> как все условия программы EB5 будут выполнены (инвестиция $500,000 в бизнес на территории США + 10 рабочих мест в течение 2-х лет), инвестор и его прямые родственники получают
+                                    постоянный статус резидентов.
+                                </p>
+                            </article>
+                            <section class="bottom-part">
+                                <h3 class="article-golden-title">Как это работает?</h3>
+                                <ul class="star-list">
+                                    <li>Инвестиция $500,000</li>
+                                    <li>Доказательство легальности инвестиции (Petition i-526)</li>
+                                    <li>Создание 10 полноценных рабочих мест</li>
+                                </ul>
+                                <form class="form program-form request-send">
+                                    <div class="message"></div>
+                                    <div class="table-wrap">
+                                        <div class="table-cell">
+                                            <div class="form-group">
+                                                <button class="golden-btn" type="submit">Консультация эксперта</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <div class="form-group">
+                                                <input name="sc-mail" type="email" class="input mail" placeholder="Ваш эл.адрес">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="attention">
+        <span>
+						Внимание! В сентябре будет рассматриваться закон о поднятии минимальной суммы инвестиций с $500 до $850 тысяч.
+					</span>
+    </div>
+    <!--end of new sect-->
+    <!-- new sect 2 -->
+    <section class="list-section outer-size">
+        <div class="table-wrap fix">
+            <div class="table-cell left-side-cover">
+                <!--     background-image: url(../images/flag.jpg); class no-back to remove-->
+                <div class="flag-outside">
+                    <figure class="figure-wrap shadow-figure">
+                        <!-- 		<img src="images/flag.jpg" alt="freedom"> -->
+                        <div class="blue-mask"></div>
+                    </figure>
+                    <div class="white-flag-caption" style="left: 358px;">
+                        Цель инвестиций EB-5 — получение постоянного вида на жительство в США
+                    </div>
+                    <div class="lawyer-figure no-caption-figure">
+                        <img src="images/lawyer-2.jpg" alt="lawyer" class="vertical">
+                        <div class="blue-mask"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell right-side-cover" id="follow">
+                <div class="list-inner">
+                    <h2 class="lined-title blue blue-section-title">Надежное юридическое сопровождение инвестора</h2>
+                    <div class="lead-block">
+                        <div class="new">Сделки сопровождает:</div>
+                        Rostova Westerman Law Group – лидирующая иммиграционная юридическая фирма, представляющая интересы инвесторов по программе ЕВ-5.
+                    </div>
+                    <ul class="checked-list line-to-left">
+                        <li><span class="bold">Опытные юристы</span> — более 14 лет суммарного опыта адвокатов компании в сфере бизнес-иммиграции и ЕВ-5.</li>
+                        <li><span class="bold">Одно из лидирующих положений на рынке ЕВ-5</span> — на начало 2017 года подгтовлено более 300 петиций на визу ЕВ-5, всего же за 2016 год было получено около 80 одобрений виз инвестора.</li>
+                        <li><span class="bold">Уникальный опыт работы</span> с инвесторами из России, а также Казахстана, Украины, Беларуси — в 2015 году только гражданам России было выдано 88 виз инвестора.</li>
+                        <li><span class="bold">Русскоговорящие специалисты.</span> Не только ассистенты, но и адвокаты фирмы говорят на руссом языке — это помогает объяснить клиентам сложные термины и бизнес-концепции связанных с программой ЕВ-5.</li>
+                        <li><span class="bold">Безупречная статистика</span> – наша компания обеспечила 100% получение Грин карты всем инвесторам, подавшим заявление на визу ЕВ-5.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lawyer-section-tab" id="lawyers">
+        <div class="container">
+            <div class="container-outer">
+                <h2 class="dark-lined-title"><span>Адвокаты фирмы</span></h2>
+                <div class="lawyer-tab-wrap">
+                    <div class="inline-wrap">
+                        <div class="col-66 col-sm-100">
+                            <div class="laweyr-outer">
+                                <div class="tab-over">
+                                    <nav class="lawyer-tab-nav">
+                                        <ul class="lawyer-tab-list">
+                                            <li class="active"><span>Ирина Ростова</span></li>
+                                            <li class=""><span>Анастасия Уайт</span></li>
+                                            <li class=""><span>Саша Вестерман-Кюнинг</span></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="lawyer-tab-caption active">
+                                        <div class="new-paragraph">
+                                            <span class="bold">Адвокат Ирина Ростова</span> получила степень бакалавра экономики в Мичиганском университете и степень доктора юридических наук в Университете Майами. Ирина Ростова является профессиональным
+                                            экономистом, как в результате полученного образования, так и в результате опыта, полученного в крупнейшем финансовом учреждении США — JPMorgan Chase Bank.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            Знание экономических процессов и иммиграционного права делает Ирину Ростову незаменимой при анализе проетов ЕВ-5 для оценки их надежности, как со стороны инвестиций, так и со стороны получения Грин карты.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            К опыту адвоката Ростовой регулярно обращаются коллеги, и она часто проводит семинары и выступления на тему иммиграции в США для инвесторов на международных и американских конференциях. Ирина Ростова свободно говорит на английском и русском языках.
+                                        </div>
+                                    </div>
+                                    <!-- tab 1 caption -->
+                                    <div class="lawyer-tab-caption">
+                                        <div class="new-paragraph">
+                                            <span class="bold">Адвокат Анастасия Уайт</span> получила юридическое образование в сфере международного права в России, и после продолжила обучение в США, получив диплом доктора юридических наук в Университете
+                                            Нова Саузистерн.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            Благодаря двойному образованию, Анастасия Уайт может представлять интересы инвесторав как на территории США, так и в России. Знание законодательства, специфики и обычаев документооборота в России, делает ее незаменимым специалистом в сфере формирования
+                                            доказательств об источнике средств для инвесторов по программе ЕВ-5.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            Анастасия Уайт помогла десяткам инвесторов и бизнесменов получить статус резидентов США. Адвокат Уайт свободно говорит на английском и русском языках.
+                                        </div>
+                                    </div>
+                                    <!-- tab 2 caption -->
+                                    <div class="lawyer-tab-caption">
+                                        <div class="new-paragraph">
+                                            <span class="bold">Адвоктат Саша Уэстерман-Кюнинг</span> является одним из ведущих иммиграционных адвокатов Южной Флориды. Она получила диплом бакалавра с отличием в Бостонском колледже, и докторскую степень
+                                            по юриспруденции в Университете Майами.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            Саша Уэстерман-Кюнинг работала в крупнейших иммиграционных фирмах Майами, где она являлась ведущим юристом и представляла интересы инвесторов в групповом иске о получении визы EB-5, что в дальнейшем, легло в основу современного законодательства о програме
+                                            EB-5.
+                                        </div>
+                                        <div class="new-paragraph">
+                                            Она обладает неоценимым опытом и глубоким пониманием в вопросе судебного процесса по EB-5 и юридическому прецеденту. Адвокат Уэстерман-Кюнинг свободно владеет английским и испанским языками.
+                                        </div>
+                                    </div>
+                                    <!-- tab 3 caption -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-33 hidden-md">
+                            <div class="laweyr-outer">
+                                <div class="tab-over">
+                                    <div class="tab-photo-cover active">
+                                        <figure class="photo-figure">
+                                            <img src="images/lawyer1.jpg" alt="laweyr" class="horizontal">
+                                            <!-- class horizontal or vertical for a different images -->
+                                            <!-- class short for an short horizontal images when window.width less then 480px it will be 100% remove if need-->
+                                        </figure>
+                                        <div class="laweyr-name">Ирина Ростова</div>
+                                    </div>
+                                    <!-- tab 1 photo -->
+                                    <div class="tab-photo-cover">
+                                        <figure class="photo-figure">
+                                            <img src="images/lawyer3.jpg" alt="laweyr" class="horizontal">
+                                            <!-- class horizontal or vertical for a different images -->
+                                            <!-- class short for an short horizontal images when window.width less then 480px it will be 100% remove if need-->
+                                        </figure>
+                                        <div class="laweyr-name">Анастасия Уайт</div>
+                                    </div>
+                                    <div class="tab-photo-cover">
+                                        <!-- tab 2 photo -->
+                                        <figure class="photo-figure">
+                                            <img src="images/lawyer4.jpg" alt="laweyr" class="horizontal">
+                                            <!-- class horizontal or vertical for a different images -->
+                                            <!-- class short for an short horizontal images when window.width less then 480px it will be 100% remove if need-->
+                                        </figure>
+                                        <div class="laweyr-name">Саша Вестерман-Кюнинг</div>
+                                    </div>
+                                    <!-- tab 2 photo -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of new sect 2 -->
+    <!-- start of section 3 -->
+    <section class="step-section step-section-back" id="order-docs">
+        <div class="container">
+            <div class="container-outer">
+                <h2 class="lined-title blue blue-section-title">Порядок оформления документов EB-5</h2>
+                <div class="inline-wrap">
+                    <div class="step-cover">
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head first">
+                                    <div class="step-number">01</div>
+                                    <div class="step-time">6-24 месяца</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Подготовка документов и перевод инвестиций на эскроу-счет, подача петиции i526
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head secound">
+                                    <div class="step-number">02</div>
+                                    <div class="step-time">5 месяцев</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Получение одобрения петиции USCIS (до 24 месяцев)
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head third">
+                                    <div class="step-number">03</div>
+                                    <div class="step-time">5 месяцев</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Получение условной грин-карты, въезд в США, возможность работать и учиться на территории США для всех членов семьи
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head fourth">
+                                    <div class="step-number">04</div>
+                                    <div class="step-time">25 месяцев</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Подача петиции i829 для получения постоянной грин-карты
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head fifth">
+                                    <div class="step-number">05</div>
+                                    <div class="step-time">11 месяцев</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Замена условной грин-карты на постоянную
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                        <div class="step-element">
+                            <div class="step-element-outer">
+                                <div class="step-head sixth">
+                                    <div class="step-number">06</div>
+                                    <div class="step-time">60 месяцев</div>
+                                </div>
+                                <!-- head -->
+                                <div class="step-caption">
+                                    Возврат инвестиций, подготовка документов на гражданство
+                                </div>
+                            </div>
+                        </div>
+                        <!-- element -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of section 3 -->
+    <!-- new small section -->
+    <section class="flag-form-section">
+        <div class="form-section-overlay">
+            <div class="container">
+                <div class="container-outer">
+                    <h2 class="blue-form-title">Оставьте заявку на получение юридической консультации</h2>
+                    <form action="#" class="loaded-form three-cell-form form request-send law-form">
+                        <div class="message"></div>
+                        <div class="table-wrap">
+                            <div class="table-cell">
+                                <div class="form-group">
+                                    <input name="law-name" type="text" class="input1" placeholder="Ваше имя">
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="form-group">
+                                    <input name="law-phone" type="text" class="input1 phone" placeholder="Ваш телефон">
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="form-group">
+                                    <button class="golden-btn" type="submit1">Получить консультацию</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of new small section -->
+    <section id="paramount" class="sec-6 clear">
+        <div class="cont sec-6-top-cont">
+            <h2 class="sec-header">ПРОЕКТ PARAMOUNT <br>И ИНВЕСТИЦИОННАЯ ПРОГРАММА EB5</h2>
+            <p class="sec-text sec-6-text">
+                В Майами строится новый проект, в котором можно принять участие как инвестору и получить Грин-карту через государственную программу EB5
+            </p>
+        </div>
+        <div class="sec-6-bg cont clear">
+            <div class="sec-6-textblock namelist paralax4" style="top: 9.16px;">
+                <p><b>Учавствуя в программе EB5</b> вы инвестируете 500 000 $ в экономику США, которые вам возвращают через 5 лет под 0.5% годовых. <br>Если вы решите приобрести квартиру в комплексе Paramount Miami Worldcenter для инвесторов есть специальная
+                    программа.</p>
+                <p><b>При заключении контракта</b> вы оплачиваете 30% от стоимости квартиры (обычно это 50%), и когда строительство будет завершено (планируется в конце 2018 году) у вас будет выбор внести оставшиеся 70% и сразу стать владельцем недвижимости
+                    или подождать еще 2 года, пока вам вернут вложенные 500 000 $.</p>
+                <p><b>Еси вы решите</b> подождать еще 2 года, вашу квартиру будут сдавать и вы будете получать 30% от прибыли. <br>Все это будет прописано заранее в контракте.</p>
+                <p><b>При этом вам</b> не нужно находиться на территории США, грин кард вы получаете через 2 года.</p>
+                <p><b>Компания Paramount</b> получила квоту на привлечение денег от инвесторов в размере $75,000,000 (10%) от стоимости постройки самого проекта.</p>
+                <p><b>На данный момент 30 человек</b> начали процесс, так как сумма инвестиций составляет $500,000 на одного человека(семью), осталось порядка 120 мест.</p>
+            </div>
+            <div class="steps-headergroupe">
+                <h3>Этапы участия в инвестиционном проекте</h3>
+                <p class="blue">Команда Wolsen Real Estate окажет любую помощь на каждом этапе инвестиций</p>
+            </div>
+        </div>
+        <ul class="steps-list cont clear">
+            <li class="step wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <span class="arrow"></span>
+                <div class="step-num">01</div>
+                <p><span class="blue">Инвестиция</span> по специальной программе в квартиру в комплексе Paramount Miami Worldcenter 30% от стоимости апартаментов<br> (от 500 000 $)</p>
+            </li>
+            <li class="step wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <span class="arrow"></span>
+                <div class="step-num">02</div>
+                <p><span class="blue">Вносите</span> оставшиеся 70% и сразу становитесь владельцем недвижимости или ждете еще 2 года, пока вам вернут вложенные $500,000.</p>
+            </li>
+            <li class="step wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <span class="arrow"></span>
+                <div class="step-num">03</div>
+                <p><span class="blue">Если</span> вы решите подождать еще 2 года, вашу квартиру будут сдавать и вы будете получать 30% от прибыли.</p>
+            </li>
+            <li class="step wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <span class="arrow"></span>
+                <div class="step-num">04</div>
+                <p><span class="blue">После</span> успешного завершения программы, инвесторы и члены их семьи получают временный статус резидента США, который впоследствии можно поменять на постоянный, и далее получить гражданство.</p>
+            </li>
+        </ul>
+    </section>
+    <div id="map-sec" class="sec-7 clear">
+        <div id="map" class="map"></div>
+        <div class="map-cont cont">
+            <div class="sec-7-textblock namelist">
+                <p><b>Комплекс Paramount Miami Worldcenter</b> будет занимать 4 городских блока общей площадью 11.3 гектара и расположен в деловом центре Майами. <br>В нем будут находиться коммерческие площади, отель Marriott и жилой комплекс с резиденциями
+                    под названием Paramount (строительство уже началось).</p>
+                <p><b>Расположен в непосредственной близости</b> от всего в Майами Участок расположен сразу к северу от центрального делового района проходящий между 2-м и 11-м Авеню Майами. Майами Worldcenter находится рядом с аэропортами,морскими портами,
+                    железнодорожними и автомобильными дорогами.</p>
+                <p><b>Удобно расположен рядом</b> с федеральной 95 автострадой и 395-той, несколькими станциями метро,аэропортом через дорогу и железнодорожним вокзалом. Майами Бич Worldcenter обеспечивает непревзойденную доступность. Территория центра обслуживает
+                    150 миллионов поездок в год. С новыми, роскошными, железнодорожными, 3-х часовыми перевозками из Орландо, по прогнозам будет еще 5 миллионов посетителей в год. Более того 1-й этап развития будет включать в себя создание 7000 новых
+                    парковочных мест,давая посетителям удобные места для парковки к близлежайшим достопримечательностям.</p>
+            </div>
+        </div>
+    </div>
+    <section id="object" class="sec-8 clear cont">
+        <h2 class="sec-header">ОБ ОБЪЕКТЕ ИНВЕСТИЦИИ <br>PARAMOUNT MIAMI WORLDCENTER</h2>
+        <p class="sec-text sec-8-text">
+            Майами Worldcenter является одним из крупнейших и наиболее интересных городских косплексов в США - это комплекс разнообразных торговых, жилых, офисных, гостиничных и развлекательных компонентов.
+        </p>
+        <div class="video-block">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jcnnttAZJbI?ecver=2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="object-info clear">
+            <div class="object-info-left">
+                <h3>Общие данные о здании</h3>
+                <ul>
+                    <li class="check">Высота здания свыше 700 футов (213 метров)</li>
+                    <li class="check">Более 500 апартаментов</li>
+                    <li class="check">Апартаменты на этажах с 10-го по 54-й</li>
+                </ul>
+                <h3>Рабочая группа</h3>
+                <ul>
+                    <li class="check"><span class="l-blue">Застройщик:</span> PARAMOUNT Ventures</li>
+                    <li class="check"><span class="l-blue">Архитектура:</span> Elkus Manfredi Architects</li>
+                    <li class="check"><span class="l-blue">Дизайн интерьера:</span> ID & Design International</li>
+                </ul>
+                <h3>Характеристики апартаментов</h3>
+                <ul>
+                    <li class="check">Частные лифты с частным фойе</li>
+                    <li class="check">Потолок высотой 10 футов (3 метра) во всех жилых помещениях</li>
+                    <li class="check">Открытые гостиные</li>
+                    <li class="check">Большие площади для развлечения</li>
+                    <li class="check">Большие площади для развлечения</li>
+                    <li class="check">Кухни европейского дизайна</li>
+                    <li class="check">Дождевой душ</li>
+                    <li class="check">Полноразмерная прачечная</li>
+                    <li class="check">Отдельная студия (в апартаментах с 3 спальнями)</li>
+                    <li class="check">Многофункциональная отдельная комната</li>
+                    <li class="check">Джакузи</li>
+                </ul>
+            </div>
+            <div class="object-info-center">
+                <img src="images/sec-8-img.jpg" alt="PARAMOUNT MIAMI WORLDCENTER" class="paralax5">
+            </div>
+            <div class="object-info-right">
+                <h3>Удобства</h3>
+                <div class="check blue object-list-title">Обзорная площадка и зона отдыха <br>на крыше</div>
+                <ul class="object-info-right-list">
+                    <li>– Лаунж-бар</li>
+                    <li>– Утренний бассейн</li>
+                    <li>– Костры</li>
+                    <li>– Панорамный бассейн</li>
+                    <li>– Солнечная терраса</li>
+                    <li>– Площадка для занятий тай-цзи и йогой</li>
+                </ul>
+                <div class="check blue object-list-title">Верхний ярус</div>
+                <ul class="object-info-right-list">
+                    <li>– Курортный бассейн</li>
+                    <li>– Беседки</li>
+                    <li>– Летняя кухня с барбекю</li>
+                    <li>– Плавающие платформы с креслами</li>
+                    <li>– Утопленные платформы с кострами</li>
+                    <li>– Детская игровая площадка</li>
+                    <li>– Футбольное поле</li>
+                    <li>– Теннисные корты</li>
+                </ul>
+                <div class="check blue object-list-title">7-ый этаж</div>
+                <div class="l-blue object-info-listname">Зоны отдыха</div>
+                <ul class="object-info-right-list">
+                    <li>– Зимний сад</li>
+                    <li>– Зал отдыха</li>
+                    <li>– Зона на открытом воздухе с местам для сидения и садами</li>
+                </ul>
+                <div class="l-blue object-info-listname">Спа / салон</div>
+                <ul class="object-info-right-list">
+                    <li>– Наружные сады с прудами</li>
+                    <li>– Паровой душ</li>
+                    <li>– Студия йоги</li>
+                    <li>– Процедурные кабинеты</li>
+                    <li>– Парикмахерская / маникюрный салон</li>
+                </ul>
+                <div class="l-blue object-info-listname">Крытый спортивный комплекс</div>
+                <ul class="object-info-right-list">
+                    <li>– Современный фитнес-центр</li>
+                    <li>– Боксерский зал</li>
+                    <li>– Зона для аэробики</li>
+                </ul>
+                <div class="l-blue object-info-listname">Развлекательный центр</div>
+                <ul class="object-info-right-list">
+                    <li>– Детская игровая комната</li>
+                    <li>– Зал отдыха</li>
+                    <li>– Музыкальная комната и студия звукозаписи</li>
+                </ul>
+                <div class="check blue object-list-title">1-ый этаж</div>
+                <p>Просторный вестибюль площадью 1 900 кв. футов (177 м2) с потолками двойной высоты Навес перед входом с круглосуточными услугами парковки</p>
+            </div>
+        </div>
+    </section>
+    <!--new section map-->
+    <section class="plan-slider-section">
+        <div class="container">
+            <div class="container-outer">
+                <h2 class="article-golden-title">Планировки квартир в Paramount Miami Worldcenter</h2>
+                <div class="slider-inside">
+                    <div class="owl-carousel owl-theme plan-simple golden-arrow">
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment1.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment1.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment2.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment2.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment1.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment3.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment2.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment4.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment1.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment5.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" data-caption="Планировка квартиры" href="images/apartment2.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment6.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <!-- item -->
+                        <div class="item">
+                            <div class="item-plan-slide">
+                                <figure class="plan-figure">
+                                    <a data-fancybox="gallery2" href="images/apartment2.jpg">
+                                        <!-- change data-fancybox to call another gallery -->
+                                        <img src="images/apartment7.jpg" alt="plan">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- item -->
+                    </div>
+                </div>
+                <!-- carousel -->
+                <div class="btn-after">
+                    <button type="button" class="golden-btn message-modal-show3">Узнать стоимость квартир</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="type-svg-section">
+        <div class="container">
+            <div class="container-outer">
+                <h2 class="article-golden-title">Виды апартаментов в Paramount Miami Worldcenter</h2>
+                <div class="plan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="968" height="448" viewBox="0 0 968 448" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <rect id="a" width="24" height="24" x="376" y="270"></rect>
+                            <mask id="n" width="24" height="24" x="0" y="0" fill="white">
+                                <use xlink:href="#a"></use>
+                            </mask>
+                            <rect id="b" width="24" height="24" x="568" y="270"></rect>
+                            <mask id="o" width="24" height="24" x="0" y="0" fill="white">
+                                <use xlink:href="#b"></use>
+                            </mask>
+                            <rect id="c" width="24" height="24" x="567" y="196"></rect>
+                            <mask id="p" width="24" height="24" x="0" y="0" fill="white">
+                                <use xlink:href="#c"></use>
+                            </mask>
+                            <rect id="d" width="24" height="22" x="517" y="198"></rect>
+                            <mask id="q" width="24" height="22" x="0" y="0" fill="white">
+                                <use xlink:href="#d"></use>
+                            </mask>
+                            <rect id="e" width="22" height="31" x="490" y="192"></rect>
+                            <mask id="r" width="22" height="31" x="0" y="0" fill="white">
+                                <use xlink:href="#e"></use>
+                            </mask>
+                            <rect id="f" width="24" height="24" x="376" y="196"></rect>
+                            <mask id="s" width="24" height="24" x="0" y="0" fill="white">
+                                <use xlink:href="#f"></use>
+                            </mask>
+                            <rect id="g" width="24" height="22" x="254.466" y="200.661"></rect>
+                            <mask id="t" width="24" height="22" x="0" y="0" fill="white">
+                                <use xlink:href="#g"></use>
+                            </mask>
+                            <rect id="h" width="24" height="22" x="257.913" y="232.004"></rect>
+                            <mask id="u" width="24" height="22" x="0" y="0" fill="white">
+                                <use xlink:href="#h"></use>
+                            </mask>
+                            <rect id="i" width="24" height="22" x="685.562" y="232.004"></rect>
+                            <mask id="v" width="24" height="22" x="0" y="0" fill="white">
+                                <use xlink:href="#i"></use>
+                            </mask>
+                            <rect id="j" width="24" height="22" x="689.913" y="201.004"></rect>
+                            <mask id="w" width="24" height="22" x="0" y="0" fill="white">
+                                <use xlink:href="#j"></use>
+                            </mask>
+                            <polygon id="k" points="287.218 186.996 316.208 183.841 325.301 258.92 296.429 263.225"></polygon>
+                            <mask id="x" width="38.083" height="79.384" x="0" y="0" fill="white">
+                                <use xlink:href="#k"></use>
+                            </mask>
+                            <polygon id="l" points="242.8 233.479 253.053 231.801 269.205 232.083 272.581 264.905 269.833 265.243 270.925 275.332 276.996 275.438 277.759 292.173 273.085 292.091 274.829 309.454 251.082 311.808 246.188 267.616"></polygon>
+                            <mask id="y" width="34.958" height="80.007" x="0" y="0" fill="white">
+                                <use xlink:href="#l"></use>
+                            </mask>
+                            <polygon id="m" points="643.479 186.98 671.668 183.722 680.754 259.111 653.012 263.054"></polygon>
+                            <mask id="z" width="37.275" height="79.332" x="0" y="0" fill="white">
+                                <use xlink:href="#m"></use>
+                            </mask>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd" stroke="#806d4f" transform="translate(0 1)">
+                            <path class="apartament-path d1" d="M242.098389,173.338577 L285.56967,168.566881 L320.374279,164.991065 L330.286743,174.857559 L335.759588,214.715274 L375.385738,214.715274 L375.385738,199.389607 L370.459897,199.389607 L370.429444,185.52707 L403.971274,185.52707 L403.971274,148.488351 L370.459897,148.488351 L370.429444,40.1370404 L365.071234,40.1370404 L365.071234,55.7480926 L359.622685,55.8216056 L359.622685,57.193312 L339.273353,57.193312 L339.273353,55.4270321 L337.527106,55.4270321 L326.907068,62.9441403 L315.553153,47.325397 L317.000105,46.1441964 L312.65832,40.1370404 C312.65832,40.1370404 296.447626,46.3825442 278.641592,54.65906 C260.835558,62.9355758 244.354887,71.8855167 244.354887,71.8855167 L249.805161,85.0185581 L210.152222,102.626953 L242.098389,173.338577 Z"
+                                stroke-linecap="square"></path>
+                            <path class="apartament-path d2" d="M596.096069,173.338577 L639.567351,168.566881 L674.37196,164.991065 L684.284424,174.857559 L689.757269,214.715274 L729.383418,214.715274 L729.383418,199.389607 L724.457577,199.389607 L724.427125,185.52707 L757.482263,185.52707 L757.482263,148.488351 L724.457577,148.488351 L724.427125,40.1401367 L719.068915,40.1370404 L719.068915,55.7480926 L713.620366,55.8216056 L713.620366,57.193312 L693.271033,57.193312 L693.271033,55.4270321 L691.524786,55.4270321 L680.904749,62.9441403 L669.550834,47.325397 L670.997785,46.1441964 L666.656001,40.1370404 C666.656001,40.1370404 650.445306,46.3825442 632.639273,54.65906 C614.833239,62.9355758 598.352568,71.8855167 598.352568,71.8855167 L603.802842,85.0185581 L564.149902,102.626953 L596.096069,173.338577 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1321.632 0)"></path>
+                            <use stroke-width="2" mask="url(#n)" xlink:href="#a"></use>
+                            <use stroke-width="2" mask="url(#o)" xlink:href="#b"></use>
+                            <use stroke-width="2" mask="url(#p)" xlink:href="#c"></use>
+                            <use stroke-width="2" mask="url(#q)" xlink:href="#d"></use>
+                            <use stroke-width="2" mask="url(#r)" xlink:href="#e"></use>
+                            <use stroke-width="2" mask="url(#s)" xlink:href="#f"></use>
+                            <use stroke-width="2" mask="url(#t)" transform="rotate(-5 266.466 211.66)" xlink:href="#g"></use>
+                            <use stroke-width="2" mask="url(#u)" transform="rotate(-5 269.913 243.004)" xlink:href="#h"></use>
+                            <use stroke-width="2" mask="url(#v)" transform="scale(-1 1) rotate(-5 0 16219.805)" xlink:href="#i"></use>
+                            <use stroke-width="2" mask="url(#w)" transform="scale(-1 1) rotate(-5 0 16288.456)" xlink:href="#j"></use>
+                            <path class="apartament-path d1" d="M365.068848,40.1287231 L365.068848,55.7480469 L359.632324,55.821228 L359.632324,57.2012329 L339.286255,57.2012329 L339.286255,55.4379272 L337.50531,55.4379272 L326.920772,62.9525657 L315.550171,47.3226929 L317.000732,46.1471558 L312.640653,40.1287231 L308.146178,29.084225 C308.146178,29.084225 317.627278,24.9964032 335.057941,19.7366266 C352.488604,14.47685 370.432373,10.2891007 370.432373,10.2891007 L370.432373,40.1298828 L365.068848,40.1287231 Z"
+                                stroke-linecap="square"></path>
+                            <path class="apartament-path d2" d="M654.068848,40.1287231 L654.068848,55.7480469 L648.632324,55.821228 L648.632324,57.2012329 L628.286255,57.2012329 L628.286255,55.4379272 L626.50531,55.4379272 L615.920772,62.9525657 L604.550171,47.3226929 L606.000732,46.1471558 L601.640653,40.1287231 L597.146178,29.084225 C597.146178,29.084225 606.627278,24.9964032 624.057941,19.7366266 C641.488604,14.47685 659.432373,10.2857056 659.432373,10.2857056 L659.432373,40.1287231 L654.068848,40.1287231 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1256.579 0)"></path>
+                            <path class="apartament-path c1" d="M543.5,413.5 L543.495874,411.667253 L553.943961,397.019544 L564.442795,404.566103 L566.076157,404.566103 L566.076157,403.54704 L586.485439,403.54704 L586.485439,404.566103 L598.05232,404.566103 L598.05232,440.086609 C598.05232,440.086609 575.923419,442.248165 558.887105,443.711216 C541.850791,445.174267 543.400139,444.579577 543.400139,444.579577 L540.723573,416.004765 L543.5,413.5 Z"
+                                stroke-linecap="square"></path>
+                            <path class="apartament-path b1" d="M372.5,413.5 L372.495874,411.667253 L382.943961,397.019544 L393.442795,404.566103 L395.076157,404.566103 L395.076157,403.54704 L415.485439,403.54704 L415.485439,404.566103 L427.05232,404.566103 L427.05232,440.086609 C427.05232,440.086609 404.923419,442.248165 387.887105,443.711216 C370.850791,445.174267 372.400139,444.579577 372.400139,444.579577 L369.723573,416.004765 L372.5,413.5 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 796.776 0)"></path>
+                            <path class="apartament-path f1" d="M36.8033374,267.29384 L37.0450858,266.070931 L63.6544116,244.481348 L62.5020908,241.480706 L62.4891204,239.415302 L50.3141162,222.763631 L49.0519906,222.56577 L34.9942054,204.082131 C34.9942054,204.082131 84.1068075,169.322618 125.065696,145.604673 C166.024584,121.886728 210.417967,102.5 210.417967,102.5 L242.498607,173.477747 L286.745827,168.843378 L287.907724,191.938824 L272.753127,193.48908 L272.753127,199.025346 L256.388604,200.573058 L256.388604,196.115356 L245.646226,197.011031 L252.737699,260.21655 L214.752237,264.775268 L204.855325,247.306465 L185.913311,257.686538 L178.788351,246.106841 L159.824816,256.55198 L153.63386,246.362034 C153.63386,246.362034 127.966077,263.146715 106.798561,278.090786 C85.631045,293.034856 68.3668595,306.559748 68.3668595,306.559748 L36.8033374,267.29384 Z"
+                                stroke-linecap="square"></path>
+                            <polygon class="apartament-path f1" points=".5 229.497 34.439 203.35 49.101 222.559 50.329 222.759 62.551 239.415 62.551 241.574 63.718 244.43 36.965 266.124 36.712 267.618 33.212 270.336"
+                                stroke-linecap="square"></polygon>
+                            <path class="apartament-path n" d="M112.910831,273.794779 C132.594756,260.085843 153.753592,246.124157 153.753592,246.124157 L159.890657,256.326694 L178.886738,246.124157 L185.839119,257.541118 L204.991793,247.376555 L214.651489,264.656241 L220.921494,264.656241 L220.921494,280.17347 L210.608673,280.17347 L210.569851,287.586221 L201.517313,287.60578 L201.456592,300.659838 L178.344139,314.784085 L172.510054,306.071309 L160.895447,313.877757 L165.562653,320.90981 L150.331117,331.275842 L156.52713,339.923901 L141.393684,350.420819 L150.815918,363.649258 L114.102745,391.836071 L114.102745,394.360074 L100.538814,405.401983 L66.3682898,364.772108 L95.0734294,339.923901 L68.5,306.5 C68.5,306.5 93.2269065,287.503716 112.910831,273.794779 Z"
+                                stroke-linecap="square"></path>
+                            <polygon class="apartament-path n" points="62.469 368.07 31.371 330.589 64.944 302.225 94.991 339.945 66.444 364.601" stroke-linecap="square"></polygon>
+                            <path class="apartament-path m" d="M146.450715,433.3327 C146.450715,433.3327 172.325536,411.198083 200.089751,391.850525 C227.853966,372.502967 256.548447,356.610837 256.548447,356.610837 L264.5459,356.610837 L255.972288,285.501126 L222.659425,289.392612 L221.011629,280.178436 L210.612369,280.178436 L210.612369,287.594119 L201.512278,287.594119 L201.512278,300.658081 L178.346436,314.793884 L172.511902,306.07312 L160.902649,313.877319 L165.559143,320.899658 L150.325867,331.280518 L156.541687,339.924561 L141.385315,350.414856 L150.809448,363.630066 L114.075867,391.850525 L114.075867,394.402984 C130.301224,413.867842 146.450715,433.3327 146.450715,433.3327 Z"
+                                stroke-linecap="square"></path>
+                            <polygon class="apartament-path a1" points="261.876 403.164 256.947 356.622 267.564 356.622 272.845 407.781" stroke-linecap="square"></polygon>
+                            <polygon class="apartament-path a1" points="256.071 285.677 299.93 279.866 332.686 275.691 346.666 262.504 370.327 262.504 370.327 273.351 375.451 273.351 375.451 290.469 370.56 290.469 370.327 404.617 364.992 404.617 364.992 400.211 359.755 400.211 359.755 398.51 339.251 398.51 339.251 400.211 337.536 400.211 326.957 392.673 316.357 407.428 316.329 411.145 309.33 420.193 307.738 420.193 272.868 407.809 267.554 356.609 264.524 356.609"
+                                stroke-linecap="square"></polygon>
+                            <polygon points="256.071 285.673 299.93 279.862 332.686 275.687 346.666 262.5 370.327 262.5 370.327 273.347 375.451 273.347 375.451 290.465 370.56 290.465 370.327 404.613 364.992 404.613 364.992 400.207 359.755 400.207 359.755 398.507 339.251 398.507 339.251 400.207 337.536 400.207 326.957 392.67 316.357 407.424 316.329 411.142 309.33 420.189 307.738 420.189 272.868 407.806 267.554 356.605 264.524 356.605"
+                                stroke-linecap="square"></polygon>
+                            <path class="apartament-path a1" d="M370.368835,404.463083 L364.920958,404.463083 L364.920958,400.057313 L359.684163,400.057313 L359.684163,398.356802 L339.179668,398.356802 L339.179668,400.057313 L337.464604,400.057313 L326.885694,392.52002 L316.286139,407.274635 L316.257819,410.991737 L309.342041,420.176679 L307.483743,420.176679 L305.639465,427.580426 C305.639465,427.580426 328.64257,433.937998 342.314356,436.584661 C355.986143,439.231324 370.255669,440.089203 370.255669,440.089203 L370.368835,404.463083 Z"
+                                stroke-linecap="square"></path>
+                            <polygon class="apartament-path a2" points="593 285.673 636.858 279.862 669.615 275.687 683.595 262.5 707.256 262.5 707.256 273.347 712.38 273.347 712.38 290.465 707.489 290.465 707.256 404.613 701.921 404.613 701.921 400.207 696.684 400.207 696.684 398.507 676.18 398.507 676.18 400.207 674.465 400.207 663.886 392.67 653.286 407.424 653.258 411.142 646.259 420.189 644.667 420.189 609.797 407.806 604.483 356.605 601.453 356.605"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1305.38 0)"></polygon>
+                            <path class="apartament-path a2" d="M662.72937,404.463083 L657.281493,404.463083 L657.281493,400.057313 L652.044697,400.057313 L652.044697,398.356802 L631.540202,398.356802 L631.540202,400.057313 L629.825138,400.057313 L619.246228,392.52002 L608.646674,407.274635 L608.618353,410.991737 L601.702576,420.176679 L599.844277,420.176679 L598,427.580426 C598,427.580426 621.003105,433.937998 634.674891,436.584661 C648.346677,439.231324 662.616203,440.089203 662.616203,440.089203 L662.72937,404.463083 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1260.73 0)"></path>
+                            <polygon class="apartament-path b1" points="421.059 259.66 421.059 253.286 403.999 253.286 403.999 297.712 370.54 297.712 370.54 404.542 381.275 404.542 381.275 403.548 401.719 403.548 401.719 404.542 403.353 404.542 413.825 397.025 424.31 411.671 424.31 413.494 426.77 415.749 463.501 417.496 463.501 335.839 483.681 335.839 483.681 259.66"
+                                stroke-linecap="square"></polygon>
+                            <path class="apartament-path c1" d="M514.199525,259.660156 L514.199525,253.286438 L497.095383,253.286438 L497.095383,297.712461 L463.617249,297.712461 L463.509399,404.541958 L475.038831,404.541958 L475.038831,403.547757 L495.443128,403.547757 L495.443128,404.541958 L497.095383,404.541958 L507.578042,397.005868 L518.039947,411.657735 L518.039947,413.472519 L520.697204,415.913924 C520.697204,415.913924 547.249042,417.187896 560.724176,417.487915 C574.19931,417.787934 598.01825,417.487915 598.01825,417.487915 L598.01825,335.838862 L577.848755,335.838862 L577.848755,259.660156 L514.199525,259.660156 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1061.528 0)"></path>
+                            <path class="apartament-path b2" d="M373.111903,16.1971135 L373.111903,14.3655094 L383.437718,1.28878372 L394.058823,8.26797744 L395.692185,8.26797744 L395.692185,7.24891397 L416.101467,7.24891397 L416.101467,8.57199138 L426.882628,8.57199138 L426.882628,38.4390502 C426.882628,38.4390502 398.257897,44.6736471 390.409936,45.7585265 C382.561975,46.8434059 373.111903,47.4130905 373.111903,47.4130905 L370.509293,19.0901316 L373.111903,16.1971135 Z"
+                                stroke-linecap="square" transform="rotate(180 398.696 24.35)"></path>
+                            <path class="apartament-path c2" d="M543.5,16.9008794 L543.495874,15.0681323 L553.943961,0.420423366 L564.442795,7.9669827 L566.076157,7.9669827 L566.079783,6.28679296 L586.431396,6.28429052 L586.431396,7.83062798 L597.14467,8.23569851 L597.14467,38.1217046 C597.14467,38.1217046 579.885214,41.8589634 567.1569,44.193811 C554.428585,46.5286586 543.400139,47.9804561 543.400139,47.9804561 L541.156441,19.0444819 L543.5,16.9008794 Z"
+                                stroke-linecap="square" transform="matrix(1 0 0 -1 0 48.4)"></path>
+                            <polygon class="apartament-path b2" points="421.966 70.303 421.966 27.484 404.274 27.484 403.999 107.146 370.432 107.146 370.432 215.497 381.275 215.497 381.275 214.185 401.691 214.185 401.691 215.211 403.325 215.211 413.937 208.25 424.31 221.314 424.31 223.148 427.111 226.236 463.501 228.159 463.501 146.471 483.681 146.471 483.681 70.303"
+                                stroke-linecap="square" transform="matrix(1 0 0 -1 0 255.643)"></polygon>
+                            <path class="apartament-path c2" d="M514.704889,67.5848395 L514.704889,27.3787433 L496.290574,27.3787433 L496.613113,104.478394 L463.509399,104.478394 L463.509399,212.769837 L474.291339,212.384644 L474.291339,210.776097 L494.638318,210.776097 L494.638318,212.384644 L496.290574,212.384644 L506.773232,204.930551 L517.235138,219.582418 L517.235138,221.397202 L519.892394,223.838608 C519.892394,223.838608 546.444233,225.11258 559.919367,225.412598 C573.394501,225.712617 597.21344,225.412598 597.21344,225.412598 L597.21344,143.763545 L577.043945,143.763545 L577.043945,67.5848395 L514.704889,67.5848395 Z"
+                                stroke-linecap="square" transform="rotate(180 530.361 126.462)"></path>
+                            <polygon class="apartament-path m" points="146.454 433.325 114.073 394.373 100.5 405.434 100.5 408.5 131.649 445.681" stroke-linecap="square"></polygon>
+                            <path class="apartament-path e2" d="M854.743309,262.669271 L860.139039,262.669271 L860.139039,261.609667 L865.636009,261.609667 L865.636009,256.19891 L881.837184,254.162614 L881.837184,259.256874 L897.856152,257.128599 L901.685822,279.827477 L857.161296,285.690442 L865.636009,356.608166 L858.947285,356.608166 C858.947285,356.608166 833.031712,370.438866 804.17289,390.343788 C775.314068,410.24871 747.983463,433.143729 747.983463,433.143729 L733.658431,415.957271 L733.658431,413.78456 L720.3756,397.803842 L718.232632,397.803842 L715.495873,394.395691 L701.869814,405.716224 L667.867607,364.747742 L678.061241,355.496155 L680.758755,355.388916 L697.429405,341.406128 L694.756981,337.360229 L694.756981,335.446777 L682.394938,319.403234 L680.758755,319.403234 L670.239356,306.61435 C670.239356,306.61435 681.55333,297.210289 711.59001,275.898682 C741.626691,254.587074 755.281549,246.361176 755.281549,246.361176 L761.464501,256.555603 L780.429045,246.097283 L787.552576,257.712011 L806.491254,247.306921 L816.408608,264.749101 L854.396508,260.223389 L854.743309,262.669271 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1569.553 0)"></path>
+                            <polygon class="apartament-path f2" points="904 229.497 937.939 203.35 952.601 222.559 953.829 222.759 966.051 239.415 966.051 241.574 967.218 244.43 951.374 259.606 949.513 258.826 940.33 266.084 940.039 267.728 936.712 270.336 926.625 257.742"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1871.218 0)"></polygon>
+                            <path class="apartament-path f2" d="M681.647337,267.29384 L681.889086,266.070931 L691.05703,258.822571 L692.902566,259.60921 L708.756484,244.450073 L707.568694,241.587769 L707.568694,239.41272 L695.363052,222.756897 L694.139724,222.55127 L680,204.012328 C680,204.012328 728.950807,169.322618 769.909696,145.604673 C810.868584,121.886728 855.261967,102.5 855.261967,102.5 L887.342607,173.477747 L931.589827,168.843378 L932.751724,191.938824 L917.597126,193.48908 L917.597126,199.025346 L901.232604,200.573058 L901.232604,196.115356 L890.490226,197.011031 L897.581699,260.21655 L859.596237,264.775268 L849.699325,247.306465 L830.757311,257.686538 L823.632351,246.106841 L804.668816,256.55198 L798.47786,246.362034 C798.47786,246.362034 772.810077,263.146715 751.642561,278.090786 C730.475045,293.034856 713.458328,306.647583 713.458328,306.647583 L681.647337,267.29384 Z"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1612.752 0)"></path>
+                            <polygon class="apartament-path e2" points="867.559 433.148 853.258 415.966 853.258 413.782 839.957 397.773 837.82 397.773 835.078 394.411 821.582 405.601 821.582 407.223 853.468 445.469"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1689.141 0)"></polygon>
+                            <polygon p="" oints="699.9 403.294 695.593 356.622 705.048 356.622 710.248 407.756" stroke-linecap="square" transform="matrix(-1 0 0 1 1405.84 0)"></polygon>
+                            <polygon points="364.725 250.618 375.98 250.618 375.98 253.967 591.43 253.967 591.43 250.401 602.922 250.401 602.922 262.493 621.766 262.493 635.78 275.7 667.877 279.789 670.799 262.493 644.034 258.695 652.989 184.265 680.248 187.439 681.136 168.458 647.248 165.006 637.345 174.882 628.727 237.537 591.93 237.537 591.93 224.779 517.515 224.779 517.515 228.173 376.205 228.173 376.205 237.783 338.916 237.783 330.307 174.882 320.54 165.033 286.748 168.458 287.653 187.44 315.74 184.37 324.752 258.507 297.957 262.493 299.883 279.873 332.673 275.7 346.673 262.493 364.725 262.493"
+                                stroke-linecap="square"></polygon>
+                            <polygon class="apartament-path e2" points="872.143 330.919 906.099 302.022 920.357 319.401 921.993 319.401 934.366 335.444 934.366 337.382 937.008 341.387 920.357 355.409 917.712 355.51 903.349 368.448"
+                                stroke-linecap="square" transform="matrix(-1 0 0 1 1809.15 0)"></polygon>
+                            <use stroke-width="2" mask="url(#x)" xlink:href="#k"></use>
+                            <use stroke-width="2" mask="url(#y)" transform="rotate(-91 260.28 271.805)" xlink:href="#l"></use>
+                            <use stroke-width="2" mask="url(#z)" transform="matrix(-1 0 0 1 1324.233 0)" xlink:href="#m"></use>
+                        </g>
+                    </svg>
+                    <div class="plan-buttons">
+                        <div class="plan-button d1-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">D1</div>
+                                <div class="plan-squer">181 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button b2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">B2</div>
+                                <div class="plan-squer">146 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button c2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">C2</div>
+                                <div class="plan-squer">174 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button d2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">D2</div>
+                                <div class="plan-squer">181 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button f2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">F2</div>
+                                <div class="plan-squer">240 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button e2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">E2</div>
+                                <div class="plan-squer">243 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button a2-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">A2</div>
+                                <div class="plan-squer">138 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button c1-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">C1</div>
+                                <div class="plan-squer">170 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button b1-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">B1</div>
+                                <div class="plan-squer">141 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button a1-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">A1</div>
+                                <div class="plan-squer">138 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button m-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">M</div>
+                                <div class="plan-squer">110 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button n-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">N</div>
+                                <div class="plan-squer">125 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="plan-button f1-button">
+                            <div class="plan-button-text">
+                                <div class="plan-name">F1</div>
+                                <div class="plan-squer">240 м2</div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                    </div>
+                    <!-- buttons -->
+                    <div class="plan-baloons">
+                        <div class="plan-baloon right-baloon f1-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">F1/F2</span> – 3 спальни + отдельная комната / 4 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 578 кв. ф. (240 м2)</li>
+                                    <li>Внутри: 376 кв. ф. (221 м2)</li>
+                                    <li>Снаружи: 2 кв. ф. (19 м2)</li>
+                                    <li>Начальная цена: 1 400 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon d1-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">D1/D2</span> – 2 спальни + отдельная комната / 3 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 952 кв. ф. (181 м2)</li>
+                                    <li>Внутри: 1 753 кв. ф. (162 м2)</li>
+                                    <li>Снаружи: Снаружи: 199 кв. ф. (18 м2)</li>
+                                    <li>Начальная цена: от 900 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon b2-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">B2</span> – 1 спальня + отдельная комната / 2 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 573 кв. ф. (146 м2)</li>
+                                    <li>Внутри: 1 386 кв. ф. (128 м2)</li>
+                                    <li>Снаружи: Снаружи: 187 кв. ф. (17 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon b1-baloon" style="display: none;">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">B1</span> – 1 спальня + отдельная комната / 2 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 521 кв. ф. (141 м2)</li>
+                                    <li>Внутри: 1 318 кв. ф. (122 м2)</li>
+                                    <li>Снаружи: Снаружи: 205 кв. ф. (19 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon a1-baloon" style="display: none; opacity: 1;">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">А1/А2</span> – 1 спальня + отдельная комната / 2 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 491 кв. ф. (138 м2)</li>
+                                    <li>Внутри: 1 294 кв. ф. (120 м2)</li>
+                                    <li>Снаружи: Снаружи: 197 кв. ф. (18 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon m-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">M</span> – 1 спальня + отдельная мната / 1,5 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 186 кв. ф. (110 м2)</li>
+                                    <li>Внутри: 1 095 кв. ф.(102 м2)</li>
+                                    <li>Снаружи: Снаружи: 91 кв. ф. (9 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon right-baloon n-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">N</span> – 1 спальня + отдельная комната / 2 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 346 кв. ф. (125 м2)</li>
+                                    <li>Внутри: 1 145 кв. ф. (106 м2)</li>
+                                    <li>Снаружи: Снаружи: 210 кв. ф. (19 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon c2-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">C2</span> – 2 спальни + отдельная комната / 3 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 877 кв. ф. (17)</li>
+                                    <li>Внутри: 1 690 кв. ф. (15)</li>
+                                    <li>Снаружи: Снаружи: 187 кв. 17 м2)</li>
+                                    <li>Начальная цена: от 750 000 $ за спальни + отдел</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon d2-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">D1/D2</span> – 2 спальни + отдельная комната / 3 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 952 кв. ф. (181 м2)</li>
+                                    <li>Внутри: 1 753 кв. ф. (162 м2)</li>
+                                    <li>Снаружи: Снаружи: 199 кв. ф. (18 м2)</li>
+                                    <li>Начальная цена: от 900 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon f2-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">F1/F2</span> – 3 спальни + отдельная комната / 4 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 578 кв. ф. (240 м2)</li>
+                                    <li>Внутри: 376 кв. ф. (221 м2)</li>
+                                    <li>Снаружи: 2 кв. ф. (19 м2)</li>
+                                    <li>Начальная цена: 1 400 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon e2-baloon" style="display: none; opacity: 1;">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">E2</span> – 3 спальни + отдельная комната / 4 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 611 кв. ф. (243 м2)</li>
+                                    <li>Внутри: 320 кв. ф. (216 м2)</li>
+                                    <li>Снаружи: 1 кв. ф. (27 м2)</li>
+                                    <li>Начальная цена: 1 400 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon a2-baloon" style="display: none; opacity: 1;">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">А1/А2</span> – 1 спальня + отдельная комната / 2 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 491 кв. ф. (138 м2)</li>
+                                    <li>Внутри: 1 294 кв. ф. (120 м2)</li>
+                                    <li>Снаружи: Снаружи: 197 кв. ф. (18 м2)</li>
+                                    <li>Начальная цена: от 750 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                        <div class="plan-baloon left-baloon c1-baloon">
+                            <div class="plan-baloon-close">×</div>
+                            <span class="plan-arrow"></span>
+                            <div class="plan-caption">
+                                <div class="plan-title"><span class="golden-text bold">C1</span> – 2 спальни + отдельная комната / 3 ванные комнаты</div>
+                                <ul class="plan-caption-list">
+                                    <li>Всего: 1 835 кв. ф. (170 м2)</li>
+                                    <li>Внутри: 1 630 кв. ф. (151 м2)</li>
+                                    <li>Снаружи: Снаружи: 205 кв. ф. (19 м2)</li>
+                                    <li>Начальная цена: от 900 000 $</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- baloon -->
+                    </div>
+                    <!-- baloons -->
+                </div>
+                <!-- plan -->
+
+            </div>
+        </div>
+    </section>
+    <!--end of new map section-->
+    <!-- add 4 new sections -->
+    <section class="about-us" id="about-us">
+
+        <div class="about-us-item left">
+            <div class="container">
+                <div class="container-outer">
+                    <div class="inline-wrap">
+                        <div class="col-40 col-ex-100">
+                            <h2 class="lined-title blue blue-section-title big">Миссия и наша цель</h2>
+                            <p class="about-us-text">
+                                <span>Nazarov Realty Group  —</span> ваш проводник в мир элитной недвижимости Америки. Мы создаем лучший сервис в сфере зарубежной недвижимости.
+                            </p>
+                            <p class="about-us-text">
+                                Мы работаем по ночам и без выходных, чтобы по-настоящему понять потребности наших клиентов и предложить наилучшее решение вопроса, предложить лучший сервис из возможных на сегодня.
+                            </p>
+                            <p class="about-us-text">
+                                Мы собрали по всему миру лучшую команду партнеров, чтобы максимально эффективно решать любые ваши вопросы.
+                            </p>
+                        </div>
+                        <div class="col-50 col-ex-100 about-us-picture-outer">
+                            <div class="about-us-picture">
+                                <img src="images/about-us-destination.jpg" alt="">
+
+                                <p class="about-us-destination">
+                                    Наша цель — 10 000 клиентов, которые купили недвижимость в Америке и реализовали свою мечту.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-us-item right">
+            <div class="container">
+                <div class="container-outer">
+                    <div class="inline-wrap">
+
+                        <div class="col-40 col-ex-100">
+                            <h2 class="lined-title blue blue-section-title big">Кто мы такие?</h2>
+                            <p class="about-us-text">
+                                <span>Nazarov Realty Group —</span> это объединение партнеров Америки, Бразилии, Китая, Великобритании и России: агентов по недвижимости, брокеров, адвокатов, иммиграционных экспертов, представителей девелоперов, финансовых
+                                экспертов, консьерж менеджеров.
+                            </p>
+
+                            <h3 class="article-golden-title">Лучше скажут цифры</h3>
+                            <p class="about-us-text">
+                                За 2016 год нами было продано <span>недвижимости более чем на 8 млрд.</span> рублей (более чем на 150 млн долларов).
+                            </p>
+                            <p class="about-us-text">
+                                <span>Теперь мы взялись за рынок Америки. И готовы помочь вам.</span>
+                            </p>
+                        </div>
+
+                        <div class="col-50 col-ex-100 about-us-picture-outer">
+                            <div class="about-us-picture">
+                                <img src="images/about-us-who-we-are.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team" id="team">
+        <div class="container">
+            <div class="container-outer">
+                <h2 class="lined-title-golden blue">Команда, которая уже работает над решением вашего вопроса:</h2>
+
+                <div class="owl-carousel simple-carousel-new owl-theme blue-arrow">
+                    <div class="item">
+                        <div class="team-item">
+                            <div class="team-picture">
+                                <img src="images/team-1.jpg" alt="">
+                            </div>
+                            <span class="team-name">Алексей Назаров</span>
+                            <span class="team-position">
+									<span class="team-position-inner">
+										Основатель и CEO Nazarov Realty Group
+									</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="team-item">
+                            <div class="team-picture">
+                                <img src="images/team-2.jpg" alt="">
+                            </div>
+                            <span class="team-name">Дмитрий Саперов</span>
+                            <span class="team-position">
+									<span class="team-position-inner">
+										Партнер по Miami
+									</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="team-item">
+                            <div class="team-picture">
+                                <img src="images/team-3.jpg" alt="">
+                            </div>
+                            <span class="team-name">Вячеслав Киселев</span>
+                            <span class="team-position">
+									<span class="team-position-inner">
+										Партнер проекта NYC
+									</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="team-item">
+                            <div class="team-picture">
+                                <img src="images/team-4.jpg" alt="">
+                            </div>
+                            <span class="team-name">Роман Ходос</span>
+                            <span class="team-position">
+									<span class="team-position-inner">
+										Ипотечный брокер Майами
+									</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end of adding new 4 sections -->
+    <section class="contact-section" id="contacts">
+        <div class="inline-wrap">
+            <div class="col-50 col-ex-100">
+                <div class="map-inside">
+                    <div id="map_canvas" class="google-map-main" style="position: relative; overflow: hidden;">
+                        <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                            <div class="gm-err-container">
+                                <div class="gm-err-content">
+                                    <div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div>
+                                    <div class="gm-err-title">Ошибка</div>
+                                    <div class="gm-err-message">При загрузке Google Карт на этой странице возникла проблема. Подробности вы найдете в консоли JavaScript.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-50 col-ex-100">
+                <div class="contact-inner">
+                    <div class="contact-cover">
+                        <h2 class="lined-title white white-section-title">Контактная информация</h2>
+                        <div class="contact-phone">
+                            <div class="contact-number">
+                                <a href="tel:88004351222" class="phone-number">8-800-435-12-22</a>
+                                <button type="button" class="call-modal-link message-modal-show1">Заказать звонок</button>
+                            </div>
+                            <ul class="phones-list">
+                                <li><a href="#"><i class="icon-viber white icon"></i>Viber</a></li>
+                                <li><a href="#"><i class="icon-whatsapp icon"></i>WhatsApp</a></li>
+                                <li><a href="#"><i class="icon-whatsapp icon"></i>Skype</a></li>
+                                <li><a href="mailto:panusa@mail.ru" class="mail-link"><i class="icon-mail icon"></i>panusa@mail.ru</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- cover -->
+                    <div class="address-tab-cover">
+                        <div class="address-caption">Адреса офисов:</div>
+                        <ul class="address-list-map" id="map-nav">
+                            <li>
+                                <div class="link-to active" id="Moscow">
+                                    <div class="address-pin">
+                                        <span class="new">Москва,</span> ул. Петровка, дом 20/1, офис 410
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- st.peterburg -->
+                            <li>
+                                <div class="link-to" id="StPeterburg">
+                                    <div class="address-pin">
+                                        <span class="new">С-Петербург,</span> Владимирский проспект 23 лит. Офис 707
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- moscow -->
+                        </ul>
+                    </div>
+                    <div class="contact-cover">
+                        <div class="social-block">
+                            <ul class="social-list white">
+                                <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-btn-holder">
+                            <button class="empty-golden-btn bg-button message-modal-show" type="button">Написать нам</button>
+                        </div>
+                    </div>
+                    <!-- cover -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="soc-block">
+            <a href="https://www.facebook.com/wolsenrealestate" class="soc-linc" target="_blank" title="facebook"><i class="icon-facebook"></i></a>
+            
+            <a href="https://www.instagram.com/wolsenrealestate/" class="soc-linc" target="_blank" title="instagram"><i class="icon-instagram"></i></a>
+            
+            <a href="https://www.instagram.com/wolsenrealestate/" class="soc-linc" target="_blank" title="youtube"><i class="icon-youtube"></i></a>
+        </div>
+        <div class="copyright">Все права на материалы защищены законом об авторских прав. <br><br>© 2017 Nazarov Realty Group Inc</div>
+    </footer>
+    <!-- modal message -->
+    <div class="backdrop message-modal">
+        <div class="modal-wrap ">
+            <div class="modal-inner">
+                <div class="container">
+                    <div class="container-outer">
+                        <div class="lined-wrap-top">
+                            <div class="lined-wrap-bottom">
+                                <div class="consalt-modal-wrap form-out-cover">
+                                    <div id="form">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Отправьте вопрос или предложение</div>
+                                            <div class="modal-intro">Заполните форму обратной связи, мы обязательно свяжемся с вами в ближайшее время!</div>
+                                        </header>
+                                        <form action="#" class="modal-form form request-send">
+                                            <!-- request-send is for ajax-->
+                                            <div class="message"></div>
+                                            <div class="modal-form-inner">
+                                                <div class="modal-input-group">
+                                                    <div class="form-group">
+                                                        <input name="q-name" type="text" class="input" placeholder="Ваше имя">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="q-mail" type="email" class="input mail" placeholder="Адрес эл.почты">
+                                                    </div>
+                                                    <div class="form-element">
+                                                        <textarea name="q-message" class="textarea" placeholder="Ваш вопрос или предложение"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-btn-wrap">
+                                                    <div class="form-element">
+                                                        <button class="golden-btn" type="submit">Отправить запрос</button>
+                                                    </div>
+                                                    <div class="form-element">
+                                                        <div class="golden-text">Конфиденциальность гарантируется!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- form -->
+                                    <!-- message -->
+                                    <div id="message" class="request-result">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Спасибо за обращение!</div>
+                                            <div class="modal-intro">Данные отправленны. Наш специалист свяжется с вами в самое ближайшее время.</div>
+                                        </header>
+                                        <div class="modal-btn-wrap">
+                                            <div class="form-element">
+                                                <button class="golden-btn close-consalt-modal" type="button">Закрыть</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="close-modal" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal message end -->
+    <!-- modal message -->
+    <div class="backdrop message-modal1">
+        <div class="modal-wrap ">
+            <div class="modal-inner">
+                <div class="container">
+                    <div class="container-outer">
+                        <div class="lined-wrap-top">
+                            <div class="lined-wrap-bottom">
+                                <div class="consalt-modal-wrap form-out-cover">
+                                    <div id="form">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Обговорите детали с нашими специалистами</div>
+                                            <div class="modal-intro">Заполните форму обратной связи, мы обязательно свяжемся с вами в ближайшее время!</div>
+                                        </header>
+                                        <form action="#" class="modal-form form request-send">
+                                            <!-- request-send is for ajax-->
+                                            <div class="message"></div>
+                                            <div class="modal-form-inner">
+                                                <div class="modal-input-group">
+                                                    <div class="form-group">
+                                                        <input name="d-name" type="text" class="input" placeholder="Ваше имя">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="d-phone" type="text" class="input" placeholder="Ваш номер телефона">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-btn-wrap">
+                                                    <div class="form-element">
+                                                        <button class="golden-btn" type="submit">Отправить запрос</button>
+                                                    </div>
+                                                    <div class="form-element">
+                                                        <div class="golden-text">Конфиденциальность гарантируется!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- form -->
+                                    <!-- message -->
+                                    <div id="message" class="request-result">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Спасибо за обращение!</div>
+                                            <div class="modal-intro">Данные отправленны. Наш специалист свяжется с вами в самое ближайшее время.</div>
+                                        </header>
+                                        <div class="modal-btn-wrap">
+                                            <div class="form-element">
+                                                <button class="golden-btn close-consalt-modal" type="button">Закрыть</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="close-modal" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal message end -->
+    <div class="backdrop message-modal2">
+        <div class="modal-wrap ">
+            <div class="modal-inner">
+                <div class="container">
+                    <div class="container-outer">
+                        <div class="lined-wrap-top">
+                            <div class="lined-wrap-bottom">
+                                <div class="consalt-modal-wrap form-out-cover">
+                                    <div id="form">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Заказать консультацию специалиста</div>
+                                            <div class="modal-intro">Заполните форму обратной связи, мы обязательно свяжемся с вами в ближайшее время!</div>
+                                        </header>
+                                        <form action="#" class="modal-form form request-send">
+                                            <!-- request-send is for ajax-->
+                                            <div class="message"></div>
+                                            <div class="modal-form-inner">
+                                                <div class="modal-input-group">
+                                                    <div class="form-group">
+                                                        <input name="s-name" type="text" class="input" placeholder="Ваше имя">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input name="s-mail" type="email" class="input mail" placeholder="Адрес эл.почты">
+                                                    </div>
+                                                    <div class="form-element">
+                                                        <textarea name="s-message" class="textarea" placeholder="Ваш вопрос или предложение"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-btn-wrap">
+                                                    <div class="form-element">
+                                                        <button class="golden-btn" type="submit">Отправить запрос</button>
+                                                    </div>
+                                                    <div class="form-element">
+                                                        <div class="golden-text">Конфиденциальность гарантируется!</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- form -->
+                                    <!-- message -->
+                                    <div id="message" class="request-result">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Спасибо за обращение!</div>
+                                            <div class="modal-intro">Данные отправленны. Наш специалист свяжется с вами в самое ближайшее время.</div>
+                                        </header>
+                                        <div class="modal-btn-wrap">
+                                            <div class="form-element">
+                                                <button class="golden-btn close-consalt-modal" type="button">Закрыть</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="close-modal" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal message end -->
+    <!-- modal message -->
+    <div class="backdrop message-modal-tnk">
+        <div class="modal-wrap ">
+            <div class="modal-inner">
+                <div class="container">
+                    <div class="container-outer">
+                        <div class="lined-wrap-top">
+                            <div class="lined-wrap-bottom">
+                                <div class="consalt-modal-wrap form-out-cover">
+                                    <!-- message -->
+                                    <div id="message" class="request-result">
+                                        <header class="modal-header">
+                                            <div class="modal-title">Спасибо за обращение!</div>
+                                            <div class="modal-intro">Данные отправленны. Наш специалист свяжется с вами в самое ближайшее время.</div>
+                                        </header>
+                                        <div class="modal-btn-wrap">
+                                            <div class="form-element">
+                                                <button class="golden-btn close-consalt-modal" type="button">Закрыть</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="close-modal close-modal-tnk" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal -->
+    <div class="backdrop request-modal message-modal3">
+        <div class="modal-wrap">
+            <div class="modal-inner">
+                <div class="container">
+                    <div class="container-outer">
+                        <div class="request-block">
+                            <div class="inline-wrap">
+                                <div class="col-40 hidden-md">
+                                    <div class="request-inside">
+                                        <div class="card-block">
+                                            <div class="card-inner">
+                                                <figure class="item-figure">
+                                                    <img src="images/item/item4.jpg" alt="item" class="horizontal short">
+
+                                                    <!-- class short for an short horizontal images when window.width less then 480px it will be 100% remove if need-->
+                                                </figure>
+                                                <!-- image -->
+                                                <div class="item-caption black">
+                                                    <div class="caption-inside">
+                                                        <a href="#">
+                                                            <div class="item-name">Paramount World Center</div>
+                                                        </a>
+                                                        <address class="item-address">1010 NE 2nd Avenue</address>
+                                                        <div class="item-price">
+                                                            <span class="from">2,100,000</span>
+                                                            <span class="to">8,600,000</span>
+                                                        </div>
+                                                        <div class="hidden-caption">
+                                                            <ul class="item-details-list">
+                                                                <li>Срок сдачи: 2017-2019</li>
+                                                                <li>Этажей: 19</li>
+                                                                <li>Квартир: 24</li>
+                                                                <li>Размер квартир: 200-750 м2</li>
+                                                            </ul>
+                                                            <div class="item-btn">
+                                                                <div class="left-btn">
+                                                                    <div class="inside-btn">
+                                                                        <a href="#" class="empty-golden-btn white-inside">Смотреть подробнее</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="right-btn">
+                                                                    <a href="#" class="round-arrow-btn"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- item-caption -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-60 col-sm-100">
+                                    <div class="request-inside">
+                                        <h2 class="article-golden-title">По вопросам покупки недвижимости в Майами позвоните по телефону <span class="eb-5">8 (800) 435-12-22</span> или оставьте заявку и мы свяжемся с Вами в ближайшее время</h2>
+                                        <div class="form-out-cover">
+
+                                            <div id="form">
+                                                <div class="request-form">
+                                                    <form action="#" class="three-cell-form form request-send">
+                                                        <div class="message"></div>
+                                                        <div class="table-wrap">
+                                                            <div class="table-cell">
+                                                                <div class="form-group">
+                                                                    <input name="pr-name" type="text" class="input" placeholder="Ваше имя">
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-cell">
+                                                                <div class="form-group">
+                                                                    <input name="pr-phone" type="text" class="input phone" placeholder="Ваш телефон">
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-cell">
+                                                                <div class="form-group">
+                                                                    <input name="pr-mail" type="email" class="input mail" placeholder="Ваш эл.адрес">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-element">
+                                                            <textarea name="pr-message" class="textarea">Я бы хотел(а) получить более подробную информации об объекте недвижимости, находящемся по адресу 18975 Collins Ave, Sunny Isles Beach (Grove at Grand Bay Ritz Carlton)</textarea>
+                                                        </div>
+                                                        <div class="form-element">
+                                                            <div class="checkbox-cover no-wrap">
+                                                                <input type="checkbox" class="checkbox" id="check1">
+                                                                <label for="check1" class="checkbox-label left-check">Подписаться на новости и обновления рынка недвижимости в Майами</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-element">
+                                                            <button class="golden-btn" type="submit">Отправить запрос</button>
+                                                        </div>
+                                                        <div class="form-element">
+                                                            <div class="golden-text">Конфиденциальность гарантируется!</div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                            <div id="message" class="request-result">
+                                                <div class="card-message-wrap">
+                                                    <div class="lined-wrap-top">
+                                                        <div class="lined-wrap-bottom">
+                                                            <div class="inline-vertical">
+                                                                <div class="inline">
+                                                                    <header class="modal-header">
+                                                                        <div class="modal-title">Спасибо за обращение!</div>
+                                                                        <div class="modal-intro">Данные отправленны. Наш специалист свяжется с вами в самое ближайшее время.</div>
+                                                                    </header>
+                                                                    <div class="modal-btn-wrap">
+                                                                        <div class="form-element">
+                                                                            <button class="golden-btn hide-message" type="button">Закрыть</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" type="button"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/jquery.fancybox.min.js"></script>
+    <script src="js/vendors/jquery.placeholder.min.js"></script>
+    <script src="js/vendors/jquery.spincrement.min.js"></script>
+    <script src="js/vendors/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/plugins.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXJk_LTVFquxuN7JDggx0vuufRwWRdPp4&callback=initMap1&libraries=places&sensor=false"></script>
+    <script src="js/map.js" async></script>
+</body>
+
+</html>
